@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "<html><body><ul>"
+#echo "<html><body><ul>"
 count=0
 while read line
 do
@@ -14,4 +14,4 @@ do
 	fi
 	count=$[$count + 1]
 done < /usr/share/dict/words
-echo "</ul></body></html>"
+#echo "</ul></body></html>"
