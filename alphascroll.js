@@ -7,6 +7,9 @@
 	        return;
 	    }
 
+	    var detectFixedPos = function() {
+	    	return false;
+	    }
 	    
 	    var list = $(this),
 	    	items = list.children('li').get(),
@@ -53,12 +56,14 @@
 	    container.css("left", $(window).width() - container.width());
 	    setTop();
 
+	    if(!detectFixedPos()) {
 	    // position on native scroll
-	    $(window).scroll(function () {
-	        if (!navclicked) {
-	            setTop();
-	        }
-	    });
+		    $(window).scroll(function () {
+		        if (!navclicked) {
+		            setTop();
+		        }
+		    });
+	    }
 
 	    var event = ('ontouchstart' in window) ? 'touchstart' : 'click';
 
@@ -75,9 +80,7 @@
 	    $(".alpha-nav-entry").bind(event,
 	        function () {
 	    		var ele = "alpha-label" + $(this).text();
-	    		console.log("ele = " + ele);
 	    		var offset = $("#alpha-label" + $(this).text()).offset().top;
-	    		console.log("offset = " + offset);
 	            navclicked = true;
 	            $('html, body').animate({
 	                scrollTop: offset
