@@ -1,3 +1,9 @@
+ul
+{
+   padding-left: 20px;
+   margin-top: 0px;
+}
+
 .alpha-label
 {
     padding-left: 1em;
@@ -42,3 +48,4 @@
     margin: 0px;
     padding-left: 15px;
 }
+
