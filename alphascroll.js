@@ -15,7 +15,7 @@
 	    
 	    var event = ('orientationchange' in window) ? 'orientationchange' : 'resize';
 	    
-	    $(window).bind(event, funciton() { console.log("orientation change"); refreshControl(); });
+	    $(window).bind(event, function() { console.log("orientation change"); refreshControl(); });
 	    
 	    var refreshControl = function() {
 		    var items = list.children('li').get(),
