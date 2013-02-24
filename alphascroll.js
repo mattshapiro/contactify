@@ -15,7 +15,7 @@
 	    
 	    var event = ('orientationchange' in window) ? 'orientationchange' : 'resize';
 	    
-	    window.addEventListener(event, refreshControl, false);
+	    $(window).bind(event, funciton() { console.log("orientation change"); refreshControl(); });
 	    
 	    var refreshControl = function() {
 		    var items = list.children('li').get(),
@@ -65,7 +65,7 @@
 		    setTop();
 	
 		    if(!detectFixedPos()) {
-		    // position on native scroll
+		    	// position on native scroll
 			    $(window).scroll(function () {
 			        if (!navclicked) {
 			            setTop();
