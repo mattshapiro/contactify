@@ -90,7 +90,7 @@
 	        }
 	    );
 	    
-	    setTop();
+	    window.setTimeout(setTop, 1000);
 
 	    // looks silly if it's taller than the window
 	    if (container.height() > winht) {
