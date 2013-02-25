@@ -51,6 +51,7 @@
 	    var setTop = function () {
 	        var height = (window.innerHeight) ? window.innerHeight : $(window).height();
 	        container.css("top", (((height - container.height()) / 2) + window.pageYOffset) + "px");
+	        console.log("setTop(" + (((height - container.height()) / 2) + window.pageYOffset) + ")")
 	    };
 	    
 	    container.css("left", $(window).width() - container.width());
