@@ -34,7 +34,7 @@
 		});
 		
 		// create contact-style nav
-		$(this).parent().append("<div class='alpha-nav'><ul class='alpha-nav-list'></ul></div>");
+		//$(this).parent().append("<div class='alpha-nav'><ul class='alpha-nav-list'></ul></div>");
 		
 		var nav = $(".alpha-nav-list"),
 			container = $('.alpha-nav');
@@ -49,7 +49,7 @@
 	    
 	 // position the nav list
 	    var setTop = function () {
-	        var height = (window.innerHeight) ? window.innerHeight : $(window).height();
+	        var height = (window.innerHeight) ? window.innerHeight : $(window).height();;
 	        container.css("top", (((height - container.height()) / 2) + window.pageYOffset) + "px");
 	        console.log("containerHeight = " + container.height());
 	        console.log("height = " + height);
@@ -93,7 +93,7 @@
 	        }
 	    );
 	    
-	    window.setTimeout(setTop, 1000);
+	    setTop();
 
 	    // looks silly if it's taller than the window
 	    if (container.height() > winht) {
