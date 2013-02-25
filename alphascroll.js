@@ -55,8 +55,7 @@
 	    };
 	    
 	    container.css("left", $(window).width() - container.width());
-	    setTop();
-
+	    
 	    if(!detectFixedPos()) {
 	    // position on native scroll
 		    $(window).scroll(function () {
@@ -90,6 +89,8 @@
 	            window.setTimeout(function () { setTop(); navclicked = false; }, 500);
 	        }
 	    );
+	    
+	    setTop();
 
 	    // looks silly if it's taller than the window
 	    if (container.height() > winht) {
