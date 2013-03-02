@@ -97,11 +97,11 @@
 	    );
 
 	    // looks silly if it's taller than the window
-	    //if (container.height() > winht) {
-	        //container.css("visibility", "hidden");
-	    //} else {
+	    if (container.height() > winht) {
+	        container.css("visibility", "hidden");
+	    } else {
 	        container.css("visibility", "visible");
-	    //}
+	    }
 	};
 })(jQuery);
 
