@@ -90,18 +90,23 @@
 	        }
 	    );
 	    
+	    var heightChk = function() {
+	    	// looks silly if it's taller than the window
+		    if (container.height() > winht) {
+		        container.css("visibility", "hidden");
+		    } else {
+		        container.css("visibility", "visible");
+		    }
+	    }
+	    
 	    $(window).bind('resize', 
 	    	function(){
 	    		setTop();
+	    		heightChk();
 	    	}
 	    );
-
-	    // looks silly if it's taller than the window
-	    if (container.height() > winht) {
-	        container.css("visibility", "hidden");
-	    } else {
-	        container.css("visibility", "visible");
-	    }
+	    
+	    heightChk();
 	};
 })(jQuery);
 
