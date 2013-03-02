@@ -51,9 +51,9 @@
 	    var setTop = function () {
 	        var height = (window.innerHeight) ? window.innerHeight : $(window).height();
 	        container.css("top", (((height - container.height()) / 2) + window.pageYOffset) + "px");
+	        container.css("left", $(window).width() - container.width());
 	    };
 	    
-	    container.css("left", $(window).width() - container.width());
 	    setTop();
 
 	    if(!detectFixedPos()) {
@@ -88,6 +88,12 @@
 	            
 	            window.setTimeout(function () { setTop(); navclicked = false; }, 500);
 	        }
+	    );
+	    
+	    $(window).bind('resize', 
+	    	function(){
+	    		setTop();
+	    	}
 	    );
 
 	    // looks silly if it's taller than the window
