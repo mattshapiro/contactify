@@ -49,8 +49,8 @@
 	    
 	 // position the nav list
 	    var setTop = function () {
-	        var height = (window.innerHeight) ? window.innerHeight : $(window).height();
-	        container.css("top", (((height - container.height()) / 2) + window.pageYOffset) + "px");
+	        winht = (window.innerHeight) ? window.innerHeight : $(window).height();
+	        container.css("top", (((winht - container.height()) / 2) + window.pageYOffset) + "px");
 	        container.css("left", $(window).width() - container.width());
 	    };
 	    
